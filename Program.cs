@@ -1,6 +1,7 @@
 ﻿
 Console.Clear();
 
+/*
 Console.WriteLine("=====================");
 Console.WriteLine("Trabalhando com datas");
 Console.WriteLine("===================== \n\n");
@@ -88,21 +89,52 @@ formated = String.Format("Completa com Zona: {0:yyyy/MM/dd hh:mm:ss zzz}", forma
 Console.WriteLine(formated); // Saida: 2024/08/31
 
 
+// Usando formatações pre-definidas
+formated = String.Format("Hora Compactada: {0:t}", formatDate);
+Console.WriteLine(formated);
+
+formated = String.Format("Data Compactada: {0:d}", formatDate);
+Console.WriteLine(formated);
+
+formated = String.Format("Hora por extenso: {0:T}", formatDate);
+Console.WriteLine(formated);
+
+formated = String.Format("Data por extenso: {0:D}", formatDate);
+Console.WriteLine(formated);
+
+formated = String.Format("Data e Hora combinada: {0:F}", formatDate);
+Console.WriteLine(formated);
+
+formated = String.Format("Data e Hora combinada: {0:G}", formatDate);
+Console.WriteLine(formated);
+
+formated = String.Format("Padrão muito utilizado em sistemas: {0:r}\n", formatDate);
+Console.WriteLine(formated);
+
+// Padrão universal
+formated = String.Format("Padrão Universal: {0:u}", formatDate);
+Console.WriteLine(formated); 
+
+// Padrão bastante utilizado em formatos JSON
+formated = String.Format("Padrão JSON: {0:s}", formatDate);
+Console.WriteLine(formated); */
 
 
+var formatDate = DateTime.Now;
+var formated = "";
 
+// Padrão bastante utilizado em formatos JSON
+formated = String.Format("{0:s}", formatDate);
+Console.WriteLine(formated);
 
+// Console.WriteLine(formated.Length);
 
+string dateReceived = formated;
 
+var usingSubstring = dateReceived.Substring(11, 8);
+Console.WriteLine(usingSubstring);
 
-
-
-
-
-
-
-
-
-
-
+string[] dateSplited = dateReceived.Split('T');
+Console.WriteLine($"Data: {dateSplited[0]}");
+Console.WriteLine($"Hora: {dateSplited[1]}");
 
