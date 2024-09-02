@@ -1,5 +1,6 @@
 public static class FormatingDates{
-    public static void Show(){
+    public static void Show()
+    {
         Console.WriteLine("==================================");
         Console.WriteLine("        FORMATANDO DATAS          ");
         Console.WriteLine("==================================\n");

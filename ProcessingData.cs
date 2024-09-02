@@ -1,5 +1,6 @@
 public static class ProcessingData{
-    public static void Show(){
+    public static void Show()
+    {
         var formatDate = DateTime.Now;
         var formated = "";
 
